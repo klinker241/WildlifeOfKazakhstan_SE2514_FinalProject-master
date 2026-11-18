@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Wildlife of Kazakhstan</title>
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/assignment5-parks-contact.css" rel="stylesheet"/>
+<link href="css/assignment6-jquery.css" rel="stylesheet"/>
+<link href="css/assignment6-parks-contact.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<link href="css/final-project.css" rel="stylesheet"/></head>
+<body>
+<div class="page-layout">
+<!-- Header -->
+<header>
+<h1>Contact Us</h1>
+<!-- New Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="index.html">
+
+                    Wildlife KZ
+
+                </a>
+<button aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<div class="nav-menu navbar-nav ms-auto">
+<a class="nav-link" href="index.html">
+
+                            Home
+
+                        </a>
+<a class="nav-link" href="animals.html">
+
+                            Animals
+
+                        </a>
+<a class="nav-link" href="parks.html">
+
+                            National Parks
+
+                        </a>
+<a aria-current="page" class="nav-link active" href="contact.html">
+
+                            Contact
+
+                        </a>
+<li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li><li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li><li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li></div>
+</div>
+<button aria-label="Toggle light and dark mode" class="theme-toggle btn btn-outline-light btn-sm ms-2" type="button">☾ / ☀</button></div>
+</nav>
+</header>
+<!-- Sidebar -->
+<aside>
+<h3>Explore</h3>
+<ul>
+<li>
+<a href="index.html">Home</a>
+</li>
+<li>
+<a href="animals.html">Animals</a>
+</li>
+<li>
+<a href="parks.html">National Parks</a>
+</li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
+</ul>
+</aside>
+<!-- Main -->
+<main class="m-0 p-3 p-md-4">
+<!-- Intro -->
+<section class="contact-intro p-3 p-md-4 mb-4">
+<h2>Contact Us</h2>
+<img alt="Mountains of Kazakhstan" class="a6-lazy-image" data-src="images/kazakhstan-mountains.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>
+                If you want to learn more about Kazakhstan's
+                wildlife and national parks, you can contact us.
+            </p>
+</section>
+<!-- Bootstrap Grid -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Send Us a Message</h2>
+<!-- Bootstrap Form -->
+<form id="contact-form" novalidate="">
+<p aria-live="polite" id="contact-form-status" role="status"></p>
+<div class="row g-3">
+<!-- Name -->
+<div class="col-12 col-md-6">
+<label class="form-label" for="name">
+
+                            Name
+
+                        </label>
+<input class="form-control" id="name" name="name" placeholder="Enter your name" type="text"/>
+</div>
+<!-- Email -->
+<div class="col-12 col-md-6">
+<label class="form-label" for="email">
+
+                            Email
+
+                        </label>
+<input class="form-control" id="email" inputmode="email" name="email" placeholder="Enter your email" type="text"/>
+</div>
+<!-- Animal description -->
+<div class="col-12">
+  <label class="form-label" for="animal">Write about your animal</label>
+  <textarea class="form-control" id="animal" name="animal" rows="4" placeholder="Tell us about an animal you have seen or would like to learn about..."></textarea>
+</div>
+<!-- Message -->
+<div class="col-12">
+<label class="form-label" for="message">
+
+                            Message
+
+                        </label>
+<textarea class="form-control" id="message" name="message" placeholder="Write your message" rows="5"></textarea>
+</div>
+<!-- Button -->
+<div class="col-12">
+<!-- Bootstrap Button -->
+<button class="btn btn-success btn-lg" id="contact-submit-btn" type="submit">
+
+                            Send Message
+
+                        </button>
+</div>
+</div>
+</form>
+</section>
+<!-- Team -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Our Team</h2>
+<!-- Bootstrap Grid -->
+<div class="row g-4">
+<div class="col-12 col-lg-6">
+<div class="team-member p-3 rounded h-100">
+<h3>Muhammed Utemisov</h3>
+<p>
+                            Worked on the National Parks and
+                            Contact pages, and co-developed the Sign Up and Log In features.
+                        </p>
+<p>
+                            Worked with HTML, CSS and Bootstrap.
+                        </p>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="team-member p-3 rounded h-100">
+<h3>Daniil Kharchenko</h3>
+<p>
+                            Worked on the Home and Animals pages, and co-developed the Sign Up and Log In features.
+                        </p>
+<p>
+                            Worked with HTML, CSS and Bootstrap.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cards -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Explore Wildlife</h2>
+<!-- Bootstrap Cards -->
+<div class="row g-4">
+<!-- Card 1 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
+<img alt="Nature of Kazakhstan" class="card-img-top a6-lazy-image" data-src="images/kazakhstan-nature.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<div class="card-body d-flex flex-column">
+<h3 class="card-title">
+                                Home
+                            </h3>
+<p class="card-text">
+                                Learn more about the wildlife
+                                and natural landscapes of Kazakhstan.
+                            </p>
+<a class="btn btn-success mt-auto" href="index.html">
+
+                                Go to Home
+
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
+<img alt="Snow leopard" class="card-img-top a6-lazy-image" data-src="images/snow-leopard.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<div class="card-body d-flex flex-column">
+<h3 class="card-title">
+                                Animals
+                            </h3>
+<p class="card-text">
+                                Discover animals that live
+                                in different regions of Kazakhstan.
+                            </p>
+<a class="btn btn-success mt-auto" href="animals.html">
+
+                                View Animals
+
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card h-100">
+<img alt="Charyn Canyon" class="card-img-top a6-lazy-image" data-src="images/charyn.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<div class="card-body d-flex flex-column">
+<h3 class="card-title">
+                                National Parks
+                            </h3>
+<p class="card-text">
+                                Explore national parks and
+                                beautiful natural places.
+                            </p>
+<a class="btn btn-success mt-auto" href="parks.html">
+
+                                View Parks
+
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Assignment 4: Popup Contact Form -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Quick Contact</h2>
+<p>Click the button to open a contact form.</p>
+<button class="btn btn-success" id="open-popup" type="button">
+        Contact Us
+    </button>
+</section>
+<!-- Popup window -->
+<div class="popup-overlay" hidden="" id="contact-popup">
+<div class="popup-box">
+<button aria-label="Close popup" class="popup-close" id="close-popup" type="button">
+            ×
+        </button>
+<h2>Quick Contact Form</h2>
+<form id="popup-form" novalidate="">
+<label class="form-label" for="popup-name">
+                Name
+            </label>
+<input class="form-control mb-3" id="popup-name" type="text"/>
+<label class="form-label" for="popup-email">
+                Email
+            </label>
+<input class="form-control mb-3" id="popup-email" inputmode="email" type="text"/>
+<label class="form-label" for="popup-message">
+                Message
+            </label>
+<textarea class="form-control mb-3" id="popup-message" rows="3"></textarea>
+<button class="btn btn-success" id="popup-submit-btn" type="submit">
+                Submit
+            </button>
+<p class="form-message" id="popup-status" role="status"></p>
+</form>
+</div>
+</div>
+<!-- Assignment 5: Interactive Contact Tools -->
+<section class="p-3 p-md-4 mb-4" id="contact-interactive">
+<h2>Personalized Wildlife Message</h2>
+<label class="form-label" for="visitor-name">Your name</label>
+<input class="form-control" id="visitor-name" placeholder="Enter your name" type="text"/>
+<button class="btn btn-success mt-3" id="greeting-button" type="button">Show Greeting</button>
+<p aria-live="polite" class="mt-3" id="visitor-greeting" role="status">Welcome to Wildlife of Kazakhstan!</p>
+<label class="form-label" for="contact-topic">Choose your interest</label>
+<select class="form-select" id="contact-topic">
+<option value="animals">Animals</option>
+<option value="parks">National Parks</option>
+<option value="volunteering">Volunteering</option>
+</select>
+<button class="btn btn-success mt-3" id="topic-button" type="button">Show Information</button>
+<p aria-live="polite" class="mt-3" id="topic-result" role="status">Choose a topic and click the button.</p>
+</section>
+</main>
+<!-- Footer -->
+<footer>
+<p>
+            Team members: Daniil Kharchenko, Muhammed Utemisov
+        </p>
+</footer>
+</div>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="js/script.js"></script>
+<script src="js/assignment5-contact.js"></script>
+<script src="js/assignment6-jquery.js"></script>
+<script src="js/assignment6-parks-contact.js"></script>
+<script defer="True" src="js/final-project.js"></script></body>
+</html>

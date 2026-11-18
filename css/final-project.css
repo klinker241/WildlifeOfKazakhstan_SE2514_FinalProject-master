@@ -1,0 +1,115 @@
+
+:root{--fp-bg:#f4f8f2;--fp-text:#17251b;--fp-card:#fff;--fp-border:#cbd8c9}html[data-theme="dark"]{--fp-bg:#121d17;--fp-text:#e9f2e8;--fp-card:#203027;--fp-border:#47604e;color-scheme:dark}body{background:var(--fp-bg)!important;color:var(--fp-text)!important}main,.final-panel{color:var(--fp-text)}.final-panel,.observation-card{background:var(--fp-card);color:var(--fp-text);border:1px solid var(--fp-border);border-radius:14px;padding:24px;box-shadow:0 6px 18px #00000013}.final-panel{max-width:650px;margin:auto}.final-panel form{display:grid;gap:14px}.final-panel label{display:grid;gap:6px;font-weight:600}.final-panel .form-control{background:var(--fp-card);color:var(--fp-text);border-color:var(--fp-border)}.final-panel a{color:#329f69}html[data-theme="dark"] p,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] label{color:var(--fp-text)}.field-error,.form-message.error{color:#d73d45!important}.form-message.success{color:#258a51!important}.observation-card img{width:100%;height:180px;object-fit:cover;border-radius:8px}.observation-card{height:100%;transition:transform .2s,box-shadow .2s}.observation-card:hover{transform:translateY(-4px);box-shadow:0 10px 22px #0002}.theme-toggle{white-space:nowrap}.btn{transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px #0002}@media(max-width:600px){.final-panel{padding:18px}.theme-toggle{margin:8px!important}#live-observations{padding:16px!important}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Dark mode: keep foreground and background colors in sync across legacy pages. */
+html[data-theme="dark"] .page-layout,
+html[data-theme="dark"] main,
+html[data-theme="dark"] main section,
+html[data-theme="dark"] main article,
+html[data-theme="dark"] main aside,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .p-3.bg-light,
+html[data-theme="dark"] .final-panel,
+html[data-theme="dark"] .observation-card,
+html[data-theme="dark"] .a6-small-note,
+html[data-theme="dark"] .js-reveal,
+html[data-theme="dark"] .animal-quiz {
+  background-color:var(--fp-card)!important;
+  color:var(--fp-text)!important;
+  border-color:var(--fp-border)!important;
+}
+html[data-theme="dark"] main :is(h1,h2,h3,h4,h5,h6,p,li,span,label,small),
+html[data-theme="dark"] .card :is(h1,h2,h3,h4,h5,h6,p,li,span,small) {color:var(--fp-text)!important}
+html[data-theme="dark"] main :is(input,textarea,select),
+html[data-theme="dark"] .modal-content {background-color:#25372b!important;color:#f1f7f0!important;border-color:var(--fp-border)!important}
+html[data-theme="dark"] main :is(input,textarea)::placeholder{color:#b6c9b9!important;opacity:1}
+html[data-theme="dark"] main a:not(.btn){color:#9de3b1}
+html[data-theme="dark"] main .btn,html[data-theme="dark"] main .btn *{color:inherit}
+html[data-theme="dark"] main .btn-success,html[data-theme="dark"] main .btn-primary{color:#fff!important}
+html[data-theme="dark"] main .field-error,html[data-theme="dark"] main .form-message.error{color:#ff9b9b!important}
+
+/* Contrast fixes for legacy components in dark theme (2026-11-18). */
+html[data-theme="dark"] .team-member,
+html[data-theme="dark"] .a6-copy-text,
+html[data-theme="dark"] .a6-stat-card,
+html[data-theme="dark"] .page-layout > aside,
+html[data-theme="dark"] .page-layout aside,
+html[data-theme="dark"] .page-layout aside ul {
+  background-color: #263c2e !important;
+  color: #f2f7f0 !important;
+  border-color: #55715d !important;
+}
+html[data-theme="dark"] .team-member :is(h1,h2,h3,h4,p,span,small),
+html[data-theme="dark"] .a6-copy-text,
+html[data-theme="dark"] .a6-stat-card :is(p,span,.a6-counter),
+html[data-theme="dark"] .page-layout aside :is(h2,h3,li) {
+  color: #f2f7f0 !important;
+}
+html[data-theme="dark"] .page-layout aside a { color: #b5efc6 !important; }
+html[data-theme="dark"] .page-layout aside a:hover,
+html[data-theme="dark"] .page-layout aside a:focus-visible { color: #ffffff !important; }
+html[data-theme="dark"] .a6-copy-text::selection { background: #37774f; color: white; }
+
+/* FAQ accordion: dark theme contrast (questions, hover states, expanded answers). */
+html[data-theme="dark"] #wildlife-faq .faq-item {
+  border-color: var(--fp-border) !important;
+  background-color: #263c2e !important;
+}
+html[data-theme="dark"] #wildlife-faq .faq-question {
+  background-color: #2b4434 !important;
+  color: #f2f7f0 !important;
+}
+html[data-theme="dark"] #wildlife-faq .faq-question:hover,
+html[data-theme="dark"] #wildlife-faq .faq-question:focus-visible {
+  background-color: #385941 !important;
+  color: #ffffff !important;
+}
+html[data-theme="dark"] #wildlife-faq .faq-answer {
+  background-color: #203027 !important;
+  color: #f2f7f0 !important;
+}
+html[data-theme="dark"] #wildlife-faq .faq-answer p {
+  color: #f2f7f0 !important;
+}
+
+/* Contact popup: ensure modal background and all form text follow dark mode. */
+html[data-theme="dark"] #contact-popup .popup-box {
+  background-color: #203027 !important;
+  color: #f2f7f0 !important;
+  border: 1px solid #55715d !important;
+  box-shadow: 0 18px 45px rgba(0,0,0,.45);
+}
+html[data-theme="dark"] #contact-popup .popup-box :is(h1,h2,h3,p,label,span,small) {
+  color: #f2f7f0 !important;
+}
+html[data-theme="dark"] #contact-popup .popup-box :is(input,textarea,select) {
+  background-color: #2b4434 !important;
+  color: #f2f7f0 !important;
+  border-color: #698471 !important;
+}
+html[data-theme="dark"] #contact-popup .popup-box :is(input,textarea)::placeholder {
+  color: #c2d4c5 !important;
+  opacity: 1;
+}
+html[data-theme="dark"] #contact-popup .popup-close {
+  color: #f2f7f0 !important;
+}
+html[data-theme="dark"] #contact-popup .popup-box .btn-success {
+  color: #fff !important;
+}
+
+/* Dynamic API catalogue cards — supports both themes */
+.api-catalogue-card {transition:transform .2s ease,box-shadow .2s ease;overflow:hidden;}
+.api-catalogue-card:hover {transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,.18);}
+.api-catalogue-card .card-img-top {height:210px;object-fit:cover;}
+#api-results .card-body {gap:.3rem;}
+#api-results .card-text {font-style:italic;}
+#api-status,#parks-api-status {min-height:1.5em;}
+#api-results [hidden],#parks-api-results [hidden] {display:none!important;}
+.a6-highlight {background:#ffe27a!important;color:#15261c!important;padding:0 .1em;border-radius:2px;}
+
+/* National Parks catalogue photos: same layout in both themes. */
+.park-api-photo { display:block; width:100%; height:235px; object-fit:cover; border-radius:10px; margin-bottom:14px; }
+.park-photo-caption { font-size:.78rem; opacity:.8; margin:-8px 0 12px; }
+@media (max-width:575px) { .park-api-photo { height:190px; } }

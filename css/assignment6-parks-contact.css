@@ -1,0 +1,50 @@
+/* Assignment 6 — extra styles for Parks and Contact pages */
+
+/* Task 5: Animated number counter */
+.a6-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+.a6-stat-card {
+    padding: 1.3rem;
+    text-align: center;
+    border-radius: 12px;
+    background: #e8f1e5;
+    border: 1px solid #c7d9c2;
+}
+.a6-counter {
+    display: block;
+    color: #24452d;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+}
+.a6-stat-card p { margin: .35rem 0 0; }
+.a6-small-note { margin-top: .8rem; font-size: .85rem; color: #657064; }
+
+/* Task 8: Copy button */
+.a6-copy-text {
+    padding: 1rem;
+    background: #f1f5ef;
+    border-left: 4px solid #397447;
+    border-radius: 6px;
+}
+.a6-copy-button { min-width: 112px; }
+.a6-copy-feedback {
+    margin-left: .75rem;
+    color: #285f35;
+    font-weight: 600;
+}
+
+/* Task 9: image loading placeholder */
+.a6-lazy-image {
+    background: #e8eee6;
+}
+
+/* Task 6: keep the loading button readable */
+#contact-submit-btn:disabled,
+#popup-submit-btn:disabled {
+    opacity: .8;
+    cursor: wait;
+}

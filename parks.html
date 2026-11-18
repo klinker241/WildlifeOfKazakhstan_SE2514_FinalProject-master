@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>National Parks - Wildlife of Kazakhstan</title>
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/assignment5-parks-contact.css" rel="stylesheet"/>
+<link href="css/assignment6-jquery.css" rel="stylesheet"/>
+<link href="css/assignment6-parks-contact.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<link href="css/final-project.css" rel="stylesheet"/></head>
+<body>
+<div class="page-layout">
+<!-- Header -->
+<header>
+<h1>National Parks of Kazakhstan</h1>
+<!-- New Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="index.html">
+
+                    Wildlife KZ
+
+                </a>
+<button aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<div class="nav-menu navbar-nav ms-auto">
+<a class="nav-link" href="index.html">
+
+                            Home
+
+                        </a>
+<a class="nav-link" href="animals.html">
+
+                            Animals
+
+                        </a>
+<a aria-current="page" class="nav-link active" href="parks.html">
+
+                            National Parks
+
+                        </a>
+<a class="nav-link" href="contact.html">
+
+                            Contact
+
+                        </a>
+<li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li><li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li><li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li></div>
+</div>
+<button aria-label="Toggle light and dark mode" class="theme-toggle btn btn-outline-light btn-sm ms-2" type="button">☾ / ☀</button></div>
+</nav>
+</header>
+<!-- Sidebar -->
+<aside>
+<h3>Explore</h3>
+<ul>
+<li>
+<a href="index.html">Home</a>
+</li>
+<li>
+<a href="animals.html">Animals</a>
+</li>
+<li>
+<a href="parks.html">National Parks</a>
+</li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
+</ul>
+</aside>
+<!-- Main -->
+<main class="m-0 p-3 p-md-4">
+<!-- Bootstrap Spacing -->
+<section class="page-intro p-3 p-md-4 mb-4">
+<h2>National Parks of Kazakhstan</h2>
+<p>
+                Kazakhstan has many beautiful national parks.
+                They protect animals, plants and natural landscapes.
+            </p>
+<img alt="Beautiful nature of Kazakhstan" class="a6-lazy-image" data-src="images/kazakhstan-nature.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+</section>
+<!-- Bootstrap Grid -->
+<section class="p-3 p-md-4 mb-4"><h2>National Parks &amp; Nature Reserves</h2><p>Explore protected natural areas of Kazakhstan. Park locations and names are loaded from OpenStreetMap via Overpass API.</p><div class="row g-2 mb-3"><div class="col-md-8"><label class="form-label" for="park-search">Search national parks and reserves</label><input class="form-control" id="park-search" placeholder="Search by park name" type="search"/></div><div class="col-md-4 d-flex align-items-end"><button class="btn btn-success w-100" id="refresh-parks" type="button">Refresh parks</button></div></div><p aria-live="polite" id="parks-api-status" role="status">Loading parks...</p><div class="row g-4" id="parks-api-results"></div></section>
+<!-- Bootstrap Grid -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Natural Areas</h2>
+<div class="row g-4">
+<div class="col-12 col-md-6 col-lg-4">
+<div class="p-3 bg-light rounded h-100">
+<h3>Mountains</h3>
+<p>
+                            Mountain areas provide habitats
+                            for many plants and animals.
+                        </p>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="p-3 bg-light rounded h-100">
+<h3>Deserts</h3>
+<p>
+                            Desert landscapes are home to
+                            specially adapted animals and plants.
+                        </p>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="p-3 bg-light rounded h-100">
+<h3>Steppes</h3>
+<p>
+                            The steppe is one of the main
+                            natural regions of Kazakhstan.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Assignment 6: Animated Number Counter -->
+<section class="p-3 p-md-4 mb-4" id="park-statistics">
+<h2>Nature at a Glance</h2>
+<p>Some numbers that show why protecting nature matters.</p>
+<div class="a6-stats-grid">
+<div class="a6-stat-card">
+<span class="a6-counter" data-target="14">0</span>
+<p>National parks</p>
+</div>
+<div class="a6-stat-card">
+<span class="a6-counter" data-target="9">0</span>
+<p>Images in the gallery</p>
+</div>
+<div class="a6-stat-card">
+<span class="a6-counter" data-target="3">0</span>
+<p>Featured parks</p>
+</div>
+</div>
+<p class="a6-small-note">The counters show the number of parks and items featured on this page.</p>
+</section>
+<!-- Gallery -->
+<section class="p-3 p-md-4 mb-4">
+<h2>National Parks Gallery</h2>
+<p>
+                Some beautiful places and landscapes of Kazakhstan.
+            </p>
+<div class="gallery">
+<div class="gallery-item">
+<img alt="Charyn Canyon" class="a6-lazy-image" data-src="images/charyn.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Charyn Canyon</p>
+</div>
+<div class="gallery-item">
+<img alt="Altyn-Emel National Park" class="a6-lazy-image" data-src="images/altyn-emel.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Altyn-Emel</p>
+</div>
+<div class="gallery-item">
+<img alt="Nature of Kazakhstan" class="a6-lazy-image" data-src="images/kazakhstan-nature.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Kazakhstan Nature</p>
+</div>
+<div class="gallery-item">
+<img alt="Burabay National Park" class="a6-lazy-image" data-src="images/burabay.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Burabay</p>
+</div>
+<div class="gallery-item">
+<img alt="Ile-Alatau National Park" class="a6-lazy-image" data-src="images/ile-alatau.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Ile-Alatau</p>
+</div>
+<div class="gallery-item">
+<img alt="Kaindy Lake" class="a6-lazy-image" data-src="images/kaindy.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Kaindy Lake</p>
+</div>
+<div class="gallery-item">
+<img alt="Kazakhstan steppe" class="a6-lazy-image" data-src="images/steppe.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Kazakhstan Steppe</p>
+</div>
+<div class="gallery-item">
+<img alt="Tamgaly landscape" class="a6-lazy-image" data-src="images/tamgaly.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Tamgaly</p>
+</div>
+<div class="gallery-item">
+<img alt="Aksu-Zhabagly nature" class="a6-lazy-image" data-src="images/aksu-zhabagly.jpg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+<p>Aksu-Zhabagly</p>
+</div>
+</div>
+</section>
+<!-- Assignment 6: Copy to Clipboard -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Share Our Nature Message</h2>
+<p class="a6-copy-text" id="nature-message-to-copy">
+                Protecting national parks means protecting wildlife, plants and the natural beauty of Kazakhstan.
+            </p>
+<button class="btn btn-success a6-copy-button" data-copy-target="#nature-message-to-copy" title="Copy text" type="button">
+<span aria-hidden="true" class="a6-copy-icon">⧉</span>
+<span class="a6-copy-label">Copy</span>
+</button>
+<span aria-live="polite" class="a6-copy-feedback"></span>
+</section>
+<!-- Why Protect -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Why Protect National Parks?</h2>
+<ol>
+<li>
+                    National parks protect natural habitats.
+                </li>
+<li>
+                    They help protect endangered animals.
+                </li>
+<li>
+                    They preserve beautiful landscapes.
+                </li>
+<li>
+                    They are important for education and tourism.
+                </li>
+</ol>
+</section>
+<!-- Assignment 4 -->
+<section class="p-3 p-md-4 mb-4">
+<h2>Interactive Nature Page</h2>
+<!-- Task 4: Background Color -->
+<button class="btn btn-success mb-3" id="color-button" type="button">
+
+        Change Background Color
+
+    </button>
+<!-- Task 5: Current Date and Time -->
+<h3>Current Date and Time</h3>
+<p>
+<time id="current-datetime"></time>
+</p>
+</section>
+<!-- Assignment 5: Interactive National Parks -->
+<section class="p-3 p-md-4 mb-4" id="parks-interactive">
+<h2>Explore National Parks</h2>
+<p id="park-description">Click the button to discover more about protecting national parks.</p>
+<button aria-expanded="false" class="btn btn-success" id="park-read-more" type="button">Read More</button>
+<p hidden="" id="park-extra">National parks protect rare species and beautiful landscapes. Visitors should stay on marked trails and never leave rubbish behind.</p>
+<h3 class="mt-4">Interactive Park Gallery</h3>
+<p>Choose a park to change the large picture.</p>
+<img alt="Charyn Canyon" class="park-preview" id="park-preview" src="images/charyn.jpg"/>
+<div class="park-thumbnails" id="park-thumbnails">
+<button aria-pressed="true" data-image="images/charyn.jpg" data-title="Charyn Canyon" type="button">Charyn</button>
+<button aria-pressed="false" data-image="images/altyn-emel.jpg" data-title="Altyn-Emel National Park" type="button">Altyn-Emel</button>
+<button aria-pressed="false" data-image="images/burabay.jpg" data-title="Burabay National Park" type="button">Burabay</button>
+</div>
+<p aria-live="polite" id="park-selected" role="status">Selected: Charyn Canyon</p>
+<h3 class="mt-4">Rate the Parks Page</h3>
+<div aria-label="Rate from one to five stars" class="park-rating" id="park-rating">
+<button aria-label="1 star" data-rating="1" type="button">☆</button>
+<button aria-label="2 stars" data-rating="2" type="button">☆</button>
+<button aria-label="3 stars" data-rating="3" type="button">☆</button>
+<button aria-label="4 stars" data-rating="4" type="button">☆</button>
+<button aria-label="5 stars" data-rating="5" type="button">☆</button>
+</div>
+<p aria-live="polite" id="rating-message" role="status">No rating selected.</p>
+</section>
+</main>
+<!-- Footer -->
+<footer>
+<p>
+            Team members: Daniil Kharchenko, Muhammed Utemisov
+        </p>
+</footer>
+</div>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="js/script.js"></script>
+<script src="js/assignment5-parks.js"></script>
+<script src="js/assignment6-jquery.js"></script>
+<script src="js/assignment6-parks-contact.js"></script>
+<script defer="True" src="js/final-project.js"></script><script defer src="js/api-catalogues.js"></script></body>
+</html>
